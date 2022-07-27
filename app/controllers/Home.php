@@ -2,12 +2,8 @@
 
     class Home extends Controller
     {
-        public function index($arg = 'John Doe')
+        public function index()
         {
-            $user = $this->model('user');
-            
-            $user->name = $arg;
-            
-            $this->view('home/index', ['name' => $user->name]);
+            $this->view('home/index');
         }
     }
