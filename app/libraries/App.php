@@ -15,9 +15,12 @@
 
             if(!empty($url))
             {
-                if(file_exists(__DIR__ . '/../controllers/' . $url[0] . '.php'))
+                $capitalizedController = ucfirst($url[0]);
+                $capitalizedController[-10] = strtoupper($capitalizedController[-10]);
+
+                if(file_exists(__DIR__ . '/../controllers/' . $capitalizedController . '.php'))
                 {
-                    $this->controller = $url[0];
+                    $this->controller = $capitalizedController;
                     unset($url[0]);
                 }
             }
