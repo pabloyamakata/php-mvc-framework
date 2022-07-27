@@ -8,6 +8,5 @@
 </head>
 <body>
     <h1>Welcome!</h1>
-    <p>Name's <?php echo $name; ?> and I'm coding my own framework</p>
 </body>
 </html>
