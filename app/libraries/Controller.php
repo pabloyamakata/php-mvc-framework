@@ -4,8 +4,9 @@
     {
         protected function model($model)
         {
-            require_once __DIR__ . '/../models/' . $model . '.php';
-            return new $model;
+            $capitalizedModel = ucfirst($model);
+            require_once __DIR__ . '/../models/' . $capitalizedModel . '.php';
+            return new $capitalizedModel;
         }
 
         protected function view($view, $vars = [])
