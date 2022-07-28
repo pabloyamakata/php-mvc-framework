@@ -7,6 +7,6 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Welcome!</h1>
+    <h1>The PHP Framework for Small Enterprises</h1>
 </body>
 </html>
