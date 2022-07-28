@@ -9,9 +9,9 @@
             return new $capitalizedModel;
         }
 
-        protected function view($view, $vars = [])
+        protected function view($view, $data = [])
         {
-            foreach ($vars as $key => $value) {
+            foreach ($data as $key => $value) {
                 ${$key} = $value;
             }
 
