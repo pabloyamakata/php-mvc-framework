@@ -13,6 +13,11 @@
             $this->view('users/index', ['users' => $users]);
         }
 
+        public function create()
+        {
+            $this->view('users/create');
+        }
+
         public function store()
         {
             if($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -27,7 +32,7 @@
                 $this->user->create($user);
 
                 // Perhaps I need to redirect instead of requiring the view
-                $this->view('users/index');
+                // $this->view('users/index');
             }
         }
 
