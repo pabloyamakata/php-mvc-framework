@@ -2,14 +2,10 @@
 
     class UserController extends Controller
     {
-        public function __construct()
-        {
-            $this->user = $this->model('user');
-        }
-
         public function index()
         {
-            $users = $this->user->findAll();
+            $userModel = $this->model('user');
+            $users = $userModel->findAll();
             $this->view('users/index', ['users' => $users]);
         }
 
@@ -22,6 +18,8 @@
         {
             if($_SERVER['REQUEST_METHOD'] == 'POST')
             {
+                $userModel = $this->model('user');
+
                 $user = [
                     'firstname' => $_POST['firstname'],
                     'lastname' => $_POST['lastname'],
@@ -29,7 +27,7 @@
                     'age' => $_POST['age']
                 ];
 
-                $this->user->create($user);
+                $userModel->create($user);
 
                 // Perhaps I need to redirect instead of requiring the view
                 // $this->view('users/index');
@@ -38,13 +36,15 @@
 
         public function show($id)
         {
-            $user = $this->user->find($id);
+            $userModel = $this->model('user');
+            $user = $userModel->find($id);
             $this->view('users/show', ['user' => $user]);
         }
 
         public function edit($id)
         {
-            $user = $this->user->find($id);
+            $userModel = $this->model('user');
+            $user = $userModel->find($id);
             $this->view('users/edit', ['user' => $user]);
         }
 
@@ -52,6 +52,8 @@
         {
             if($_SERVER['REQUEST_METHOD'] == 'POST')
             {
+                $userModel = $this->model('user');
+
                 $request = [
                     'firstname' => $_POST['firstname'],
                     'lastname' => $_POST['lastname'],
@@ -59,14 +61,15 @@
                     'age' => $_POST['age']
                 ];
 
-                $this->user->update($id, $request);
+                $userModel->update($id, $request);
                 $this->view('users/show');
             }
         }
 
         public function destroy($id)
         {
-            $this->user->delete($id);
+            $userModel = $this->model('user');
+            $userModel->delete($id);
             $this->view('users/index');
         }
     }
