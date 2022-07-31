@@ -1,3 +1,3 @@
 <?php
-    
-    define('ROOT_DIRECTORY', 'http://localhost/php-mvc-framework/');
+
+    define('ROOT_DIRECTORY', str_replace('\\', '/', dirname(dirname(__DIR__) . '/')));
