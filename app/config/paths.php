@@ -1,3 +1,4 @@
 <?php
 
-    define('ROOT_DIRECTORY', str_replace('\\', '/', dirname(dirname(__DIR__)) . '/'));
+    define('ROOT_PATH', str_replace('\\', '/', dirname(dirname(__DIR__)) . '/'));
+    define('DOMAIN', 'http://localhost/php-mvc-framework/public/');
