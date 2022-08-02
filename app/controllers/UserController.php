@@ -23,10 +23,10 @@
             if($_SERVER['REQUEST_METHOD'] == 'POST')
             {
                 $user = [
-                    'firstname' => $_POST['firstname'],
-                    'lastname' => $_POST['lastname'],
-                    'email' => $_POST['email'],
-                    'age' => $_POST['age']
+                    'firstname' => trim($_POST['firstname']),
+                    'lastname' => trim($_POST['lastname']),
+                    'email' => trim($_POST['email']),
+                    'age' => trim($_POST['age'])
                 ];
 
                 $this->model->create($user);
@@ -52,10 +52,10 @@
             if($_SERVER['REQUEST_METHOD'] == 'POST')
             {
                 $request = [
-                    'firstname' => $_POST['firstname'],
-                    'lastname' => $_POST['lastname'],
-                    'email' => $_POST['email'],
-                    'age' => $_POST['age']
+                    'firstname' => trim($_POST['firstname']),
+                    'lastname' => trim($_POST['lastname']),
+                    'email' => trim($_POST['email']),
+                    'age' => trim($_POST['age'])
                 ];
 
                 $this->model->update($id, $request);
