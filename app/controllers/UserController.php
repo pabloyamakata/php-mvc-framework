@@ -31,8 +31,7 @@
 
                 $this->model->create($user);
 
-                // Perhaps I need to redirect instead of requiring the view
-                // $this->view('users/index');
+                redirect('homecontroller/index');
             }
         }
 
