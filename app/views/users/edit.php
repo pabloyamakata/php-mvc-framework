@@ -1,6 +1,6 @@
-<?php include_once ROOT_PATH . 'app/views/inc/header.php'; ?>
+<?php include_once Config::getRootDirectory() . 'app/views/inc/header.php'; ?>
 
-<form action=<?= DOMAIN . 'usercontroller/update/' . $user['id'] ?> method="POST">
+<form action=<?= Config::getDomain() . 'usercontroller/update/' . $user['id'] ?> method="POST">
 
     <label for="firstname">First Name</label>
     <input type="text" id="firstname" name="firstname" value=<?= $user['firstname'] ?>>
@@ -18,4 +18,4 @@
 
 </form>
 
-<?php include_once ROOT_PATH . 'app/views/inc/footer.php'; ?>
+<?php include_once Config::getRootDirectory() . 'app/views/inc/footer.php'; ?>
