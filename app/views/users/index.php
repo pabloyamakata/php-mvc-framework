@@ -11,12 +11,7 @@
     </thead>
     <tbody>
         
-        <?php
-        
-            foreach($users as $user)
-            {
-        
-        ?>
+        <?php foreach($users as $user): ?>
 
         <tr>
             <td><?= $user['firstname'] ?></td>
@@ -26,7 +21,7 @@
             <td><a href=<?= DOMAIN . 'usercontroller/show/' . $user['id'] ?>>Show</a></td>
         </tr>
 
-        <?php } ?>
+        <?php endforeach; ?>
 
     </tbody>
 </table>
