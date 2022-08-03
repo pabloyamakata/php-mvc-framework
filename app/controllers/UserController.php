@@ -31,7 +31,7 @@
 
                 $this->model->create($user);
 
-                redirect('homecontroller/index');
+                redirect('usercontroller/index');
             }
         }
 
@@ -59,13 +59,14 @@
                 ];
 
                 $this->model->update($id, $request);
-                $this->view('users/show');
+                
+                redirect('usercontroller/show/' . $id);
             }
         }
 
         public function destroy($id)
         {
             $this->model->delete($id);
-            $this->view('users/index');
+            redirect('usercontroller/index');
         }
     }
