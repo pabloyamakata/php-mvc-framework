@@ -31,4 +31,6 @@
     </tbody>
 </table>
 
+<a href=<?= DOMAIN . 'usercontroller/create' ?>>Create User</a>
+
 <?php include_once ROOT_PATH . 'app/views/inc/footer.php'; ?>
