@@ -1,2 +1,2 @@
-<?php include_once ROOT_PATH . 'app/views/inc/header.php'; ?>
-<?php include_once ROOT_PATH . 'app/views/inc/footer.php'; ?>
+<?php include_once Config::getRootDirectory() . 'app/views/inc/header.php'; ?>
+<?php include_once Config::getRootDirectory() . 'app/views/inc/footer.php'; ?>
