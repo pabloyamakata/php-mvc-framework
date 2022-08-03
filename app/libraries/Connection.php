@@ -1,12 +1,12 @@
 <?php
 
-    class Connection
+    class Connection extends Config
     {
-        private $host = DB_HOST;
-        private $user = DB_USER;
-        private $password = DB_PASSWORD;
-        private $database = DB_NAME;
-        private $charset = DB_CHARSET;
+        private $host = Config::DB_HOST;
+        private $user = Config::DB_USER;
+        private $password = Config::DB_PASSWORD;
+        private $database = Config::DB_NAME;
+        private $charset = Config::DB_CHARSET;
 
         protected function connect()
         {
