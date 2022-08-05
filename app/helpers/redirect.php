@@ -2,5 +2,5 @@
 
     function redirect($path)
     {
-        header('Location: ' . Config::getDomain() . $path);
+        header('Location: ' . Config::domain() . $path);
     }

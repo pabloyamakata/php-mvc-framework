@@ -8,13 +8,13 @@
         const DB_NAME = 'websavant';
         const DB_CHARSET = 'utf8mb4';
 
-        public static function getDomain()
+        public static function domain()
         {
             $domain = 'http://localhost/php-mvc-framework/public/';
             return $domain;
         }
 
-        public static function getRootDirectory()
+        public static function rootDirectory()
         {
             $rootDirectory = str_replace('\\', '/', dirname(dirname(__DIR__)) . '/');
             return $rootDirectory;

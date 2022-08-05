@@ -1,4 +1,4 @@
 <!-- Include main.js -->
-<script src=<?= Config::getDomain() . 'js/main.js' ?>></script>
+<script src=<?= Config::domain() . 'js/main.js' ?>></script>
 </body>
 </html>
