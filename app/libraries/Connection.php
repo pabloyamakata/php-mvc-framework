@@ -2,11 +2,11 @@
 
     class Connection extends Config
     {
-        private $host = Config::DB_HOST;
-        private $user = Config::DB_USER;
-        private $password = Config::DB_PASSWORD;
-        private $database = Config::DB_NAME;
-        private $charset = Config::DB_CHARSET;
+        private $host = parent::DB_HOST;
+        private $user = parent::DB_USER;
+        private $password = parent::DB_PASSWORD;
+        private $database = parent::DB_NAME;
+        private $charset = parent::DB_CHARSET;
 
         protected function connect()
         {
