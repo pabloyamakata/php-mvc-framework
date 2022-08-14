@@ -11,8 +11,8 @@
 
         protected function view($view, $data = [])
         {
-            foreach($data as $key => $value) {
-
+            foreach($data as $key => $value)
+            {
                 if(is_array($value) && count($value) == 1)
                 {
                     ${$key} = $value[0];
