@@ -2,11 +2,8 @@
 
     class App
     {
-
         protected $controller = 'HomeController';
-        
         protected $method = 'index';
-
         protected $params;
 
         public function __construct()
@@ -47,7 +44,8 @@
         {
             if(isset($_GET['url']))
             {
-                return explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
+                $url = explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
+                return $url;
             }
         }
     }
