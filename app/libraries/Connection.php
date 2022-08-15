@@ -2,11 +2,11 @@
 
     class Connection
     {
-        private $host = 'localhost';
-        private $user = 'root';
-        private $password = '';
-        private $database = 'websavant';
-        private $charset = 'utf8mb4';
+        private $host = DB_HOST;
+        private $user = DB_USER;
+        private $password = DB_PASSWORD;
+        private $database = DB_NAME;
+        private $charset = DB_CHARSET;
 
         protected function connect()
         {
