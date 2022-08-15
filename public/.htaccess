@@ -1,9 +1,21 @@
-Options -Multiviews
+# Disable multiviews search.
+Options -MultiViews
+
+# Invoke rewrite engine.
 RewriteEngine On
 
+# Set the beginning of all relative paths mentioned in the rewrite rules.
 RewriteBase /php-mvc-framework/public/
 
+# If the following conditions are true...
+# Check whether the value passed by the URL does not exist as a directory on the server.
 RewriteCond %{REQUEST_FILENAME} !-d
+
+# Check whether the value passed by the URL does not exist as a file on the server.
 RewriteCond %{REQUEST_FILENAME} !-f
 
+# ...then rewrite the URL in the following way:
+# Take what's in the REQUEST_FILENAME placeholder and redirect to index.php,
+# then pass REQUEST_FILENAME as the value of the url parameter [QSA]. Finally,
+# stop processing further rewrite rules [L].
 RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
