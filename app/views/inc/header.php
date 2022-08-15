@@ -6,6 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebSavant</title>
     <!-- Include styles.css -->
-    <link rel="stylesheet" href=<?= Helper::domain() . 'css/styles.css' ?>>
+    <link rel="stylesheet" href=<?= APP_URL . 'css/styles.css' ?>>
 </head>
 <body>

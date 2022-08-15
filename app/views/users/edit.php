@@ -1,6 +1,6 @@
-<?php include_once Helper::rootDir() . 'app/views/inc/header.php'; ?>
+<?php include_once APP_DIR . 'views/inc/header.php'; ?>
 
-    <form action=<?= Helper::domain() . 'usercontroller/update/' . $user['id'] ?> method="POST">
+    <form action=<?= APP_URL . 'usercontroller/update/' . $user['id'] ?> method="POST">
     
         <label for="firstname">First Name</label>
         <input type="text" id="firstname" name="firstname" value=<?= $user['firstname'] ?>>
@@ -18,4 +18,4 @@
     
     </form>
 
-<?php include_once Helper::rootDir() . 'app/views/inc/footer.php'; ?>
+<?php include_once APP_DIR . 'views/inc/footer.php'; ?>

@@ -1,4 +1,4 @@
-<?php include_once Helper::rootDir() . 'app/views/inc/header.php'; ?>
+<?php include_once APP_DIR . 'views/inc/header.php'; ?>
 
     <table>
         <thead>
@@ -18,7 +18,7 @@
                 <td><?= $user['lastname'] ?></td>
                 <td><?= $user['email'] ?></td>
                 <td><?= $user['age'] ?></td>
-                <td><a href=<?= Helper::domain() . 'usercontroller/show/' . $user['id'] ?>>Show</a></td>
+                <td><a href=<?= APP_URL . 'usercontroller/show/' . $user['id'] ?>>Show</a></td>
             </tr>
             
             <?php endforeach; ?>
@@ -26,6 +26,6 @@
         </tbody>
     </table>
             
-    <a href=<?= Helper::domain() . 'usercontroller/create' ?>>Create User</a>
+    <a href=<?= APP_URL . 'usercontroller/create' ?>>Create User</a>
 
-<?php include_once Helper::rootDir() . 'app/views/inc/footer.php'; ?>
+<?php include_once APP_DIR . 'views/inc/footer.php'; ?>

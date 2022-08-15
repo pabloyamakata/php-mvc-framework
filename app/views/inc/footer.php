@@ -1,4 +1,4 @@
     <!-- Include main.js -->
-    <script src=<?= Helper::domain() . 'js/main.js' ?>></script>
+    <script src=<?= APP_URL . 'js/main.js' ?>></script>
 </body>
 </html>
