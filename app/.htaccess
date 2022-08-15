@@ -1,1 +1,2 @@
+# Prevents the directory from being indexed so that website visitors cannot access its content.
 Options -Indexes
