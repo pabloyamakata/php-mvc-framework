@@ -1,4 +1,4 @@
-# Disable multiviews search.
+# Disable Apache server MultiViews search.
 Options -MultiViews
 
 # Invoke rewrite engine.
