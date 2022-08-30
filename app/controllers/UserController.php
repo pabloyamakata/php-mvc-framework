@@ -1,5 +1,10 @@
 <?php
 
+    namespace App\Controllers;
+
+    use App\Libraries\Controller;
+    use App\Helpers\Helper;
+
     class UserController extends Controller
     {
         public function __construct()
