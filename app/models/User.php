@@ -1,5 +1,9 @@
 <?php
 
+    namespace App\Models;
+
+    use App\Libraries\Connection;
+
     class User extends Connection
     {
         public function create($user)
