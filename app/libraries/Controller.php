@@ -1,12 +1,13 @@
 <?php
 
+    namespace App\Libraries;
+
     class Controller
     {
         protected function model($model)
         {
-            $capitalizedModel = ucfirst($model);
-            require_once __DIR__ . '/../models/' . $capitalizedModel . '.php';
-            return new $capitalizedModel;
+            $selectedModel = '\\App\\Models\\' . ucfirst($model);
+            return new $selectedModel;
         }
 
         protected function view($view, $data = [])
