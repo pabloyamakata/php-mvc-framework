@@ -1,5 +1,10 @@
 <?php
 
+    namespace App\Libraries;
+
+    use PDO;
+    use PDOException;
+
     class Connection
     {
         private $host = DB_HOST;
