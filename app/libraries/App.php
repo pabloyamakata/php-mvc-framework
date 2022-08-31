@@ -1,5 +1,7 @@
 <?php
 
+    namespace App\Libraries;
+
     class App
     {
         protected $controller = 'HomeController';
@@ -22,9 +24,9 @@
                 }
             }
 
-            require_once __DIR__ . '/../controllers/' . $this->controller . '.php';
+            $controller = '\\App\\Controllers\\' . $this->controller;
 
-            $this->controller = new $this->controller;
+            $this->controller = new $controller;
 
             if(isset($url[1]))
             {
