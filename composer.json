@@ -1,7 +1,19 @@
 {
+    "name": "pabloyamakata/php-mvc-framework",
+    "description": "Small PHP framework to start a new project using OOP and the MVC pattern",
+    "type": "project",
     "autoload": {
         "psr-4": {
             "App\\": "app/"
         }
-    }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pablo Yamakata",
+            "email": "pablo.yamakata@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
 }
