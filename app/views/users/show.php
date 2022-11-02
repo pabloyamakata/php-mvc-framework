@@ -6,9 +6,9 @@
     
     <p>Age: <?= $user['age'] ?></p>
 
-    <p><a href=<?= APP_URL . 'usercontroller/edit/' . $user['id'] ?>>Edit</a></p>
+    <p><a href=<?= APP_URL . 'users/' . $user['id'] . '/edit' ?>>Edit</a></p>
 
-    <form action=<?= APP_URL . 'usercontroller/destroy/' . $user['id'] ?> method="POST">
+    <form action=<?= APP_URL . 'users/' . $user['id'] . '/destroy' ?> method="POST">
         <input type="submit" value="Delete">
     </form>
 

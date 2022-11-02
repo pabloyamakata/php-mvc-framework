@@ -18,7 +18,7 @@
                 <td><?= $user['lastname'] ?></td>
                 <td><?= $user['email'] ?></td>
                 <td><?= $user['age'] ?></td>
-                <td><a href=<?= APP_URL . 'usercontroller/show/' . $user['id'] ?>>Show</a></td>
+                <td><a href=<?= APP_URL . 'users/' . $user['id'] ?>>Show</a></td>
             </tr>
             
             <?php endforeach; ?>
@@ -26,6 +26,6 @@
         </tbody>
     </table>
             
-    <a href=<?= APP_URL . 'usercontroller/create' ?>>Create User</a>
+    <a href=<?= APP_URL . 'users/create' ?>>Create User</a>
 
 <?php include_once APP_DIR . 'views/inc/footer.php'; ?>
