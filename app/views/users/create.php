@@ -1,6 +1,6 @@
 <?php include_once APP_DIR . 'views/inc/header.php'; ?>
 
-    <form action=<?= APP_URL . 'usercontroller/store' ?> method="POST">
+    <form action=<?= APP_URL . 'users/store' ?> method="POST">
         
         <label for="firstname">First Name</label>
         <input type="text" id="firstname" name="firstname">

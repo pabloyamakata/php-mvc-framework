@@ -1,6 +1,6 @@
 <?php include_once APP_DIR . 'views/inc/header.php'; ?>
 
-    <form action=<?= APP_URL . 'usercontroller/update/' . $user['id'] ?> method="POST">
+    <form action=<?= APP_URL . 'users/' . $user['id'] . '/update' ?> method="POST">
     
         <label for="firstname">First Name</label>
         <input type="text" id="firstname" name="firstname" value=<?= $user['firstname'] ?>>
