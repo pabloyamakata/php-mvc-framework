@@ -1,0 +1,39 @@
+<?php
+
+    namespace App\Libraries;
+
+    class Request
+    {
+        public $path;
+        public $method;
+
+        public function __construct()
+        {
+            $this->path = $this->path();
+            $this->method = $this->method();
+        }
+
+        private function path()
+        {
+            if(isset($_GET['url']))
+            {
+                $path = $_GET['url'];
+                $position = strpos($path, '?');
+
+                if($position == false)
+                {
+                    return '/' . $path;
+                }
+
+                return '/' . substr($path, 0, $position);
+            } else
+            {
+                return '/';
+            }
+        }
+
+        private function method()
+        {
+            return strtolower($_SERVER['REQUEST_METHOD']);
+        }
+    }
