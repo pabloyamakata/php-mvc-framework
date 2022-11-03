@@ -1,10 +1,7 @@
 <?php
 
     use App\Libraries\Router;
-    use App\Controllers\HomeController;
     use App\Controllers\UserController;
-
-    Router::get('/', [HomeController::class, 'index']);
     
     Router::get('/users', [UserController::class, 'index']);
     Router::get('/users/create', [UserController::class, 'create']);
