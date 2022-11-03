@@ -118,6 +118,7 @@
         public static function run()
         {
             $request = new Request;
+            require_once __DIR__ . '/../routes/routes.php';
             self::handleRequest($request);
         }
     }
