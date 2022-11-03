@@ -118,7 +118,13 @@
         public static function run()
         {
             $request = new Request;
-            require_once __DIR__ . '/../routes/routes.php';
+            $files = array_diff(scandir(__DIR__ . '/../routes/'), ['.', '..']);
+
+            foreach($files as $file)
+            {
+                require_once __DIR__ . '/../routes/' . $file;
+            }
+            
             self::handleRequest($request);
         }
     }
