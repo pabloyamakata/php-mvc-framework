@@ -17,7 +17,7 @@
         {
             if(isset($_GET['url']))
             {
-                $path = $_GET['url'];
+                $path = filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL);
                 $position = strpos($path, '?');
 
                 if($position == false)
