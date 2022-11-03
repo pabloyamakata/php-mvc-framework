@@ -2,7 +2,9 @@
 
     namespace App\Libraries;
 
-    class Controller
+    use App\Libraries\Validator;
+
+    class Controller extends Validator
     {
         protected function model($model)
         {
