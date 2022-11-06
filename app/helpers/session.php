@@ -28,10 +28,10 @@
 
             public function getError($field)
             {
-                $sessionVar = $_SESSION['errors'][$field][0];
+                $errorMessage = $_SESSION['errors'][$field][0];
                 unset($_SESSION['errors'][$field]);
 
-                return $sessionVar;
+                return $errorMessage;
             }
         };
     }
