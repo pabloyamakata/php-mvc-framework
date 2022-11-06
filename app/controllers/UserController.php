@@ -25,18 +25,30 @@
 
         public function store()
         {
-            if($_SERVER['REQUEST_METHOD'] == 'POST')
-            {
-                $user = [
-                    'firstname' => trim($_POST['firstname']),
-                    'lastname' => trim($_POST['lastname']),
-                    'email' => trim($_POST['email']),
-                    'age' => trim($_POST['age'])
-                ];
+            $user = [
+                'firstname' => trim($_POST['firstname']),
+                'lastname' => trim($_POST['lastname']),
+                'email' => trim($_POST['email']),
+                'age' => trim($_POST['age'])
+            ];
 
+            $rules = [
+                'firstname' => ['required' => true, 'min' => 6, 'max' => 8],
+                'lastname' => ['required' => true],
+                'email' => ['required' => true, 'email' => true],
+                'age' => ['required' => true],
+            ];
+
+            $this->validate($user, $rules);
+
+            if(!$this->errors())
+            {
                 $this->model->create($user);
 
-                Helper::redirect('users/create');
+                Helper::redirect('users/create')->with('success', 'Record was created successfully');
+            } else
+            {
+                Helper::redirect('users/create')->withErrors($this->errors());
             }
         }
 
