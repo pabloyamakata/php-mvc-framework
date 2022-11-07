@@ -118,9 +118,9 @@
         public static function run()
         {
             $request = new Request;
-            $files = array_diff(scandir(__DIR__ . '/../routes/'), ['.', '..']);
+            $routeFiles = array_diff(scandir(__DIR__ . '/../routes/'), ['.', '..']);
 
-            foreach($files as $file)
+            foreach($routeFiles as $file)
             {
                 require_once __DIR__ . '/../routes/' . $file;
             }
